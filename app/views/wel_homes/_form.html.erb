@@ -1,0 +1,17 @@
+<%= form_for(@wel_home) do |f| %>
+  <% if @wel_home.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@wel_home.errors.count, "error") %> prohibited this wel_home from being saved:</h2>
+
+      <ul>
+      <% @wel_home.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
